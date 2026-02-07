@@ -4,8 +4,8 @@ from string import Template
 try:
     import openai
     # please replace the API with yours
-    API_SECRET_KEY= "sk-RHziVretLrVdZ4QzDfC1A17694Da4495B2De5d8d20Ea17B9" # 填写我们给您的apikey
-    BASE_URL = "https://api.ai-gaochao.cn/v1"
+    API_SECRET_KEY= ""
+    BASE_URL = ""
     gpt_client = openai.OpenAI(api_key=API_SECRET_KEY, base_url=BASE_URL)
 except:
     print("openai not found")
