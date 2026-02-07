@@ -1,5 +1,7 @@
 # HarmMetric Eval
 
+This is the official repository of ***HarmMetric Eval: Benchmarking Metrics and Judges for LLM Harmfulness Assessment***.
+
 The file `benchmark_codes/scoring.py` contains the core code for scoring in our benchmark.
 
 This repository contains our benchmark dataset, training data, and test data in the `data` folder, provided as `dataset.jsonl`, `train_data.jsonl`, and `test_data.jsonl`, respectively. You can also download these files from [here](https://huggingface.co/datasets/Abel-24/HarmMetric_Eval).
